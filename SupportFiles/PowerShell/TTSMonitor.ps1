@@ -35,7 +35,7 @@ function Test-FileLocked {
 }
 
 # TTS startup
-$voice = "Microsoft Catherine"
+$voice = "Microsoft Zira Desktop"
 $rate  = 1
 $volume= 100
 [TTS]::SpeakText("Text to speech monitor, version 21 loading.", $voice, $rate, $volume)
@@ -64,7 +64,7 @@ while ($true) {
         foreach ($file in $files) {
             # Wait until the file is not locked (retry up to 10 times)
             $attempts = 0
-            while (Test-FileLocked -FilePath $file.FullName -and $attempts -lt 10) {
+            while ((Test-FileLocked -FilePath $file.FullName) -and ($attempts -lt 10)) {
                 Start-Sleep -Milliseconds 100
                 $attempts++
             }
@@ -100,7 +100,7 @@ while ($true) {
             # Validate that the sequence in the filename matches the TTSSeq value in the JSON
             $expectedSeq = $file.BaseName.Substring(6,4)
             if ($json.TTSSeq -ne $expectedSeq) {
-                Write-Host "WARNING: Sequence mismatch in file $($file.Name): Expected $expectedSeq, got $($json.TTSSeq)." -ForegroundColor Orange
+                Write-Host "WARNING: Sequence mismatch in file $($file.Name): Expected $expectedSeq, got $($json.TTSSeq)." -ForegroundColor DarkYellow
             }
             
             # Retrieve TTS parameters from the JSON

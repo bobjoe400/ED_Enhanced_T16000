@@ -2,7 +2,7 @@
 #
 
 param (
-    [string]$inputFolderPath    = "D:\Users\Den\Saved Games\Frontier Developments\Elite Dangerous",
+    [string]$inputFolderPath    = "C:\Users\cnama\Saved Games\Frontier Developments\Elite Dangerous",
     [string]$outputFolderPath   = "C:\Thrustmaster\ED_TargetScript_T16000\SupportFiles\Output",
     [string]$trackingFilePath   = "C:\Thrustmaster\ED_TargetScript_T16000\SupportFiles\Output\Tracking.json"
 )
@@ -25,7 +25,7 @@ Import-Module TransformUtilities -ErrorAction Stop
 Import-Module TTS               -ErrorAction Stop
 
 # TTS startup
-$voice = "Microsoft Catherine"
+$voice = "Microsoft Zira Desktop"
 $rate  = 1
 $volume= 100
 [TTS]::SpeakText("Journal processor version 31 loading", $voice, $rate, $volume)

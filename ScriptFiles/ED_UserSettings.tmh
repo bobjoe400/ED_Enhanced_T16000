@@ -14,8 +14,8 @@
 	//-----------------------------//
 
 	// --- Refer 'status.json' section below for more info
-	alias	StatusFile			= "d:\\Users\\<username>\\Saved Games\\Frontier Developments\\Elite Dangerous\\status.json";		// This is critical and must be set correctly
-	alias	MaxStatusFile		= "d:\\Users\\<username>\\Saved Games\\Frontier Developments\\Elite Dangerous\\NewMaxJson.json";	// You can set the path to anywhere you like. I prefer keeping this in same folder as status.json 
+	alias	StatusFile			= "C:\\Users\\cnama\\Saved Games\\Frontier Developments\\Elite Dangerous\\status.json";		// This is critical and must be set correctly
+	alias	MaxStatusFile		= "C:\\Users\\cnama\\Saved Games\\Frontier Developments\\Elite Dangerous\\NewMaxJson.json";	// You can set the path to anywhere you like. I prefer keeping this in same folder as status.json 
 
 	// 		!!! IMPORTANT !!! 
 	// If you have chosen to unzip/install to somewhere other than 'c:\Thrustmaster\ED_TargetScript_Warthog\' on your PC
@@ -64,7 +64,7 @@
 	// Hardware settings //
 	//-------------------//
 
-	int 	EnableMyRudder		= ENABLED;				// Set to DISABLED if you do not have a Thrustmaster TFRP or TFRPHA Rudder.
+	int 	EnableMyRudder		= DISABLED;				// Set to DISABLED if you do not have a Thrustmaster TFRP or TFRPHA Rudder.
 
 	define	YAWDeviceOverride	DISABLED				// If ENABLED, overrides autodetection and sets YAWDevice on next line 
 	int		YAWDevice			= "THRPaddles";			// Options = "JSTwist",  "THRPaddles", "RudderPedals"	
@@ -150,8 +150,8 @@
 	alias	Linda				= "\"Microsoft Linda\"";				// Adult, Female,	en-CA
 
 	// 'DefaultVoice' and 'AltVoice' MUST BE installed by following the instructions in the links provided above	
-	int		DefaultVoice		= &Catherine;			// Set your preferred (installed) voice here
-	int		AltVoice			= &James;				// Secondary Voice refer fnTextToSpeech() on usage.
+	int		DefaultVoice		= &Zira;			// Set your preferred (installed) voice here
+	int		AltVoice			= &David;				// Secondary Voice refer fnTextToSpeech() on usage.
 	
 	// NOTE:	I have used two or more voices in this script
 	//			I recommend that you search the script looking for 'fnTextToSpeech' to check which voices I have used and change if required
